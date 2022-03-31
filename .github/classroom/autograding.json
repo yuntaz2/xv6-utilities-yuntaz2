@@ -1,0 +1,94 @@
+{
+  "tests": [
+    {
+      "name": "Setup Environment",
+      "setup": "",
+      "run": "sudo apt-get update; sudo apt-get install git build-essential gdb-multiarch qemu-system-misc gcc-riscv64-linux-gnu binutils-riscv64-linux-gnu",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 30,
+      "points": null
+    },
+    {
+      "name": "sleep-no-args",
+      "setup": "",
+      "run": "./grade-lab-util \"sleep, no arguments\"",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5
+    },
+    {
+      "name": "sleep-return",
+      "setup": "",
+      "run": "./grade-lab-util \"sleep, returns\"",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5
+    },
+    {
+      "name": "sleep-syscall",
+      "setup": "",
+      "run": "./grade-lab-util \"sleep, makes syscall\"",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "pingpong",
+      "setup": "",
+      "run": "./grade-lab-util \"pingpong\"",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 20
+    },
+    {
+      "name": "primes",
+      "setup": "",
+      "run": "./grade-lab-util \"primes\"",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 20
+    },
+    {
+      "name": "find-cwd",
+      "setup": "",
+      "run": "./grade-lab-util \"find, in current directory\"",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "find-recursive",
+      "setup": "",
+      "run": "./grade-lab-util \"find, recursive\"",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "xargs",
+      "setup": "",
+      "run": "./grade-lab-util \"xargs\"",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 20
+    }
+  ]
+}
