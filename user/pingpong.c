@@ -3,7 +3,7 @@
 #include "kernel/types.h"
 #include "kernel/stat.h"
 #include "user/user.h"
-#define BUF_SIZE 8
+#define BUF_SIZE 4
 
 int main(int argc, char *argv[])
 {
@@ -24,14 +24,14 @@ int main(int argc, char *argv[])
         int child_pid = getpid();
         read(p[0], buffer, BUF_SIZE);
         printf("%d: received %s\n", child_pid, buffer);
-        write(p[1], "pong", 4);
+        write(p[1], "pong", BUF_SIZE);
         exit(0);
     }
     default:
     {
         // parent process
         int parent_pid = getpid();
-        write(p[1], "ping", 4);
+        write(p[1], "ping", BUF_SIZE);
         wait(0);
         read(p[0], buffer, BUF_SIZE);
         printf("%d: received %s\n", parent_pid, buffer);
